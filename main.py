@@ -26,6 +26,8 @@ def compare(score1, score2):
     print(f"Dealer wins. Dealers score: {score2} :(")
   elif score1 > 21:
     print("You lose!!! Went over 21.")
+  elif score2 > 21:
+    print(f"You win! The dealer went over 21 with a score of {score2}")
   else:
     if score1 > score2:
       print(f"You win! Your score was {score1} and the dealer's score was {score2}")
@@ -45,7 +47,7 @@ def blackjack():
     user_score = calc_score(user_cards)
     dealer_score = calc_score(dealer_cards)
       
-    print(f"Your cards: {user_cards}, current score = {user_score}\nComputer's first card: {dealer_cards[0]}")
+    print(f"Your cards: {user_cards}, current score = {user_score}\nDealers's first card: {dealer_cards[0]}")
     if user_score == 0 or dealer_score == 0 or user_score > 21:
         is_game_over = True
     else:
